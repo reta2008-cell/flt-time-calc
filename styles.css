@@ -1,0 +1,125 @@
+:root{
+  --bg:#0b0b0f;
+  --panel:#12121a;
+  --stroke:rgba(255,255,255,.55);
+  --num:rgba(255,255,255,.24);
+  --text:#fff;
+  --blue:#1e86ff;
+  --orange:#d67a1f;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family: -apple-system, system-ui, Segoe UI, Roboto, Arial;
+}
+
+.app{
+  min-height:100%;
+  padding: max(16px, env(safe-area-inset-top)) 16px
+           max(18px, env(safe-area-inset-bottom)) 16px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.title{
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:.2px;
+}
+
+.iconBtn{
+  background:transparent;
+  border:0;
+  color:white;
+  font-size:20px;
+  padding:8px 10px;
+  opacity:.9;
+}
+
+.screen{
+  background:var(--panel);
+  border:2px solid var(--stroke);
+  border-radius:10px;
+  padding:14px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.badge{
+  background:rgba(30,134,255,.85);
+  padding:6px 10px;
+  border-radius:8px;
+  font-weight:700;
+  letter-spacing:.5px;
+}
+
+.value{
+  font-size:56px;
+  font-weight:800;
+  font-variant-numeric: tabular-nums;
+  line-height:1;
+}
+
+.pad{
+  display:flex;
+  justify-content:center;
+}
+
+.grid{
+  width:min(520px, 100%);
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:12px;
+}
+
+.key{
+  height:74px;
+  border:0;
+  border-radius:14px;
+  color:white;
+  font-size:30px;
+  font-weight:800;
+  background:var(--num);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  user-select:none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.key:active{ transform: scale(.98); opacity:.95; }
+
+.key.op{
+  background: linear-gradient(to bottom, rgba(30,134,255,.95), rgba(18,90,180,.95));
+}
+
+.key.clear{
+  background: linear-gradient(to bottom, rgba(214,122,31,.95), rgba(150,80,15,.95));
+}
+
+.key.util{
+  background:rgba(255,255,255,.18);
+}
+
+.key.wide{
+  grid-column: span 2;
+}
+
+.hint{
+  opacity:.7;
+  font-size:12px;
+  text-align:center;
+}
