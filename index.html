@@ -12,44 +12,49 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="app">
-    <header class="top">
-      <div class="title">Time Calculator</div>
-      <button class="iconBtn" id="clearAll" aria-label="Clear">🗑️</button>
-    </header>
+ <main class="app">
+  <header class="top">
+    <div class="title">Time Calculator</div>
+    <button class="iconBtn" id="clearAll" aria-label="Clear">🗑️</button>
+  </header>
 
-    <section class="screen" aria-label="Display">
-      <div class="badge">HH:MM</div>
-      <div class="value" id="display">0:00</div>
-    </section>
+  <!-- Tape / History -->
+  <section class="tape" aria-label="History">
+    <div class="tapeInner" id="tape"></div>
+  </section>
 
-    <section class="pad" aria-label="Keypad">
-      <div class="grid">
-        <button class="key num" data-num="7">7</button>
-        <button class="key num" data-num="8">8</button>
-        <button class="key num" data-num="9">9</button>
-        <button class="key op" data-op="+">+</button>
+  <section class="screen" aria-label="Display">
+    <div class="badge">HH:MM</div>
+    <div class="value" id="display">0:00</div>
+  </section>
 
-        <button class="key num" data-num="4">4</button>
-        <button class="key num" data-num="5">5</button>
-        <button class="key num" data-num="6">6</button>
-        <button class="key op" data-op="-">−</button>
+  <section class="pad" aria-label="Keypad">
+    <div class="grid">
+      <button class="key num" data-num="7">7</button>
+      <button class="key num" data-num="8">8</button>
+      <button class="key num" data-num="9">9</button>
+      <button class="key op" data-op="+">+</button>
 
-        <button class="key num" data-num="1">1</button>
-        <button class="key num" data-num="2">2</button>
-        <button class="key num" data-num="3">3</button>
-        <button class="key op" data-op="=">=</button>
+      <button class="key num" data-num="4">4</button>
+      <button class="key num" data-num="5">5</button>
+      <button class="key num" data-num="6">6</button>
+      <button class="key op" data-op="-">−</button>
 
-        <button class="key num wide" data-num="0">0</button>
-        <button class="key util" id="backspace">⌫</button>
-        <button class="key clear" id="clearEntry">C</button>
-      </div>
-    </section>
+      <button class="key num" data-num="1">1</button>
+      <button class="key num" data-num="2">2</button>
+      <button class="key num" data-num="3">3</button>
+      <button class="key op" data-op="=">=</button>
 
-    <footer class="hint">
-      Digits only. Last 2 digits = minutes. Example: 1331 → 13:31
-    </footer>
-  </main>
+      <button class="key num wide" data-num="0">0</button>
+      <button class="key util" id="backspace">⌫</button>
+      <button class="key clear" id="clearEntry">C</button>
+    </div>
+  </section>
+
+  <footer class="hint">
+    Digits only. Last 2 digits = minutes. Example: 1331 → 13:31
+  </footer>
+</main>
 
   <script src="app.js"></script>
 </body>
