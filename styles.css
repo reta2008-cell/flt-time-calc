@@ -123,3 +123,37 @@ body{
   font-size:12px;
   text-align:center;
 }
+.tape{
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:12px;
+  padding:10px;
+  max-height: 240px;
+  overflow:auto;
+}
+
+.tapeInner{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.tapeRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:18px;
+  font-weight:700;
+  opacity:.95;
+  padding:4px 2px;
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+
+.tapeRow .sym{
+  width:26px;
+  opacity:.85;
+}
+
+.tapeRow .val{
+  font-variant-numeric: tabular-nums;
+}
