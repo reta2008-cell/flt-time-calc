@@ -14,20 +14,17 @@ html,body{height:100%,
          padding: 0;}
 body{
  overflow: hidden;
-  margin:0;
-  
-  background:var(--bg);
-  color:var(--text);
-  font-family: -apple-system, system-ui, Segoe UI, Roboto, Arial;
+  overscroll-behavior: none;
+ 
 }
 
 .app{
-  min-height:100%;
-  padding: max(16px, env(safe-area-inset-top)) 16px
-           max(18px, env(safe-area-inset-bottom)) 16px;
+  height:100dvh;
+ padding: 12px;
+  padding-bottom:calc(12px + env(safe-area-inset-bottom));
   display:flex;
   flex-direction:column;
-  gap:18px;
+  
 }
 
 .top{
@@ -104,6 +101,7 @@ body{
   justify-content:center;
   user-select:none;
   -webkit-tap-highlight-color: transparent;
+  aspect-ratio: 1/1;
 }
 
 .key:active{ transform: scale(.98); opacity:.95; }
@@ -121,7 +119,7 @@ body{
 }
 
 .key.wide{
-  grid-column: span 2;
+ aspect-ratio: 2/1;
 }
 
 .hint{
